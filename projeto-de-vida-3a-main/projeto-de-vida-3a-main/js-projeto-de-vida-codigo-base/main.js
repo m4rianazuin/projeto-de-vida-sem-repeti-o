@@ -29,9 +29,9 @@ const tempos = [tempoObjetivo1, tempoObjetivo2, tempoObjetivo3, tempoObjetivo4];
     function atualizaCrnometro(){
         for (let i = 0; i < contadores.length; i++) {
     contadores[i].textContent = calculaTempo(tempos[i]);
-}
+     }
 
-    }
+} 
    atualizaCrnometro();
    setInterval(atualizaCronometro, 1000);
 
@@ -48,5 +48,24 @@ segundos %= 60;
 minutos %=60;
 horas %=24;
 dias %=365;
-return anos + " Anos " + dias + " Dias " + horas + " Horas " + minutos + " Minutos " + segundos + " Segundos ";
+if (tempoFinal > 0){
+    return dias + " dias " + horas + " horas " + minutos + " minutos " + segundos + " segundos";
+} else {
+    return "Prazo Finalizado";
 }
+}
+
+    function atualizaCrnometro(){
+        for (let i = 0; i < contadores.length; i++) {
+    contadores[i].textContent = calculaTempo(tempos[i]);
+     }
+
+function comecaCronometro(){
+
+}
+    
+} 
+   atualizaCrnometro();
+   setInterval(atualizaCronometro, 1000);
+
+   comecaCronometro();
